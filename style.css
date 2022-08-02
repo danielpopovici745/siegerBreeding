@@ -25,10 +25,10 @@ button{
 }
 #header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 10px;
-    width: 900px;
-    gap: 50px;
+    width: 70vw;
+    gap: 40px;
 }
 #header ul{
     color: #fff;
@@ -58,7 +58,7 @@ button{
     align-items: center;
 }
 
-@media (min-width:805px){
+@media screen and (min-width:805px){
     #hamburgerMenu{
         display: none;
     }
@@ -68,8 +68,29 @@ button{
     #headerContent{
         display: none;
     }
+    #headerContainer{
+        display: flex;
+        justify-content: center;
+    }
     #header{
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #headerLogo img{
+        width: 180px;
+        height: auto;
+    }
+    #header{
+        
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 281px){
+    #header{
+        gap: 20px;
     }
 }
