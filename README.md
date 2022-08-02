@@ -1,2 +1,2 @@
 # siegerBreeding
-website for sieger Breeding
+Website for Sieger Breeding
