@@ -58,6 +58,51 @@ button{
     align-items: center;
 }
 
+/* Slider */
+
+#sliderContainer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+#slider{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0);
+}
+
+.sliderButton{
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.3);   
+    padding: 0px 5px;
+    z-index: 2;
+}
+
+#previousButton{
+    left:2%;
+}
+
+#nextButton{
+    right:2%;
+}
+
+.sliderItem{
+    display: flex;
+    flex: 1;    
+}
+
+.imgDiv{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
 @media screen and (min-width:805px){
     #hamburgerMenu{
         display: none;
