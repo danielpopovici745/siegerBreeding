@@ -39,8 +39,22 @@ button{
     margin: 0px;
     display: flex;
     gap: 30px;
-    align-items: center;
 }
+
+li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #5C85A0;
+}
+
+.active{
+    text-decoration: none;
+    color: #5C85A0;
+}
+
 #headerContent{
     display: flex;
     align-items: center;
@@ -89,13 +103,13 @@ button{
 
 /* Media Queries */
 
-@media screen and (min-width:931px){
+@media screen and (min-width:1025px){
     #hamburgerMenu{
         display: none;
     }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1024px) {
     #headerContent{
         display: none;
     }
