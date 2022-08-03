@@ -1,0 +1,125 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'roboto',sans-serif;
+    height: 100vh;
+    align-items: center;
+    background: #282828;
+}
+button{
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    height: fit-content;
+}
+
+/* Header */
+#headerContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    font-size: 24px;
+}
+#header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    width: 70vw;
+    gap: 40px;
+}
+#header ul{
+    color: #fff;
+    height: fit-content;
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+#headerContent{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    white-space: nowrap;
+}
+#adopt{
+    background: #5C85A0;
+    color: #fff;
+    border: solid white 1px;
+    border-radius: 8px;
+    padding: 6px;
+}
+#hamburgerMenu{
+    display: flex;
+    align-items: center;
+}
+
+/* Slider */
+
+/* Image Slider */
+.imageContainer {
+    overflow-x: hidden;
+    max-width: 100%;
+    padding-top: 20px;
+}
+.imageWrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+.imageWrapper * {
+    aspect-ratio: 3/4;
+}
+.imageWrapper div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width:931px){
+    #hamburgerMenu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    #headerContent{
+        display: none;
+    }
+    #headerContainer{
+        display: flex;
+        justify-content: center;
+    }
+    #header{
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #headerLogo img{
+        width: 180px;
+        height: auto;
+    }
+    #header{
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 281px){
+    #header{
+        gap: 20px;
+    }
+}
