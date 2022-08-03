@@ -6,6 +6,7 @@ body{
     font-family: 'roboto',sans-serif;
     height: 100vh;
     align-items: center;
+    background: #282828;
 }
 button{
     background: none;
@@ -21,7 +22,7 @@ button{
     display: flex;
     justify-content: space-around;
     width: 100vw;
-    background: #282828;
+    font-size: 24px;
 }
 #header{
     display: flex;
@@ -60,58 +61,40 @@ button{
 
 /* Slider */
 
-#sliderContainer{
-    width: 100%;
-    height: 300px;
-    display: flex;
-    align-items: center;
+/* Image Slider */
+.imageContainer {
+    overflow-x: hidden;
+    max-width: 100%;
+    padding-top: 20px;
 }
-
-#slider{
-    display: flex;
+.imageWrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+.imageWrapper * {
+    aspect-ratio: 3/4;
+}
+.imageWrapper div img {
     width: 100%;
     height: 100%;
-    transform: translateX(0);
-    transition: ease 0.3s;
+    object-fit: cover;
+    border-radius: .5rem;
 }
 
-.sliderButton{
-    position: absolute;
-    color: #fff;
-    font-size: 50px;
-    background: rgba(0, 0, 0, 0.3);   
-    padding: 0px 5px;
-    z-index: 2;
-    cursor: pointer;
-}
+/* Media Queries */
 
-#previousButton{
-    left:2%;
-}
-
-#nextButton{
-    right:2%;
-}
-
-.sliderItem{
-    display: flex;
-    flex: 1;    
-}
-
-.imgDiv{
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-}
-
-@media screen and (min-width:805px){
+@media screen and (min-width:931px){
     #hamburgerMenu{
         display: none;
     }
 }
 
-@media screen and (max-width: 804px) {
+@media screen and (max-width: 930px) {
     #headerContent{
         display: none;
     }
@@ -131,7 +114,6 @@ button{
         height: auto;
     }
     #header{
-        
         justify-content: space-evenly;
     }
 }
