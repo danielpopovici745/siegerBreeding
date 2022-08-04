@@ -26,11 +26,23 @@ button{
 }
 #header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 10px;
-    width: 70vw;
-    gap: 40px;
+    width: 100%;
+    gap: 30px;
 }
+
+#headerLogo{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+#headerLogo img{
+    width: auto;
+    max-height: 100%;
+}
+
 #header ul{
     color: #fff;
     height: fit-content;
@@ -68,7 +80,7 @@ li a{
     border-radius: 8px;
     padding: 6px;
 }
-#hamburgerMenu{
+#menuButton{
     display: flex;
     align-items: center;
 }
@@ -104,7 +116,7 @@ li a{
 /* Media Queries */
 
 @media screen and (min-width:1025px){
-    #hamburgerMenu{
+    #menuButton{
         display: none;
     }
 }
@@ -119,22 +131,21 @@ li a{
     }
     #header{
         align-items: center;
-        justify-content: space-around;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 425px){
     #headerLogo img{
-        width: 180px;
+        max-width: 100%;
         height: auto;
     }
     #header{
+        gap: 0px;
         justify-content: space-evenly;
     }
 }
 
-@media screen and (max-width: 281px){
+/* @media screen and (max-width: 281px){
     #header{
-        gap: 20px;
     }
-}
+} */
