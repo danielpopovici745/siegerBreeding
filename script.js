@@ -25,3 +25,22 @@ function scrolling() {
   imageWrapper.style.left = `-${totalScroll * widthEl}px`
   imageWrapper.style.transition = '1s'
 }
+
+// Hamburger Menu
+
+let menuToggle = document.querySelector('#menuToggle');
+let menu = document.querySelector('#menu')
+let menuPressed = false;
+menuToggle.addEventListener('click', (e) =>{
+    menuToggle.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+
+window.addEventListener('resize',()=>{
+    if(window.innerWidth >= 1025){
+        menu.classList.remove('active');
+    }
+});
+
+
+

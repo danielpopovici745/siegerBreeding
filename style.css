@@ -20,6 +20,7 @@ button{
 /* Header */
 #headerContainer{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     width: 100vw;
     font-size: 24px;
@@ -80,9 +81,28 @@ li a{
     border-radius: 8px;
     padding: 6px;
 }
-#menuButton{
+#menuToggle{
     display: flex;
+    height: 50px;
+    width: 50px;
     align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#menuToggle span{
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: #5C85A0;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+#menuToggle span:nth-child(1){
+    transform: translateY(-15px);
+}
+#menuToggle span:nth-child(2){
+    transform: translateY(15px);
 }
 
 /* Slider */
@@ -113,10 +133,48 @@ li a{
     border-radius: .5rem;
 }
 
+/* Hamburger Menu */
+
+#menu{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+#menu.active{
+    display: flex;
+}
+
+#menuContent{
+    padding: 20px 20px 20px 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#menuContent ul{
+    padding: 0px;
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    text-align: right;
+}
+
 /* Media Queries */
 
 @media screen and (min-width:1025px){
-    #menuButton{
+    #menuToggle{
         display: none;
     }
 }
