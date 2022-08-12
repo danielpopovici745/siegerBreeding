@@ -1,13 +1,13 @@
 const imageWrapper = document.querySelector('.imageWrapper')
 const imageItems = document.querySelectorAll('.imageWrapper > *')
 const imageLength = imageItems.length
-const perView = 3
-let totalScroll = 0
-const delay = 5000
+let perView = 3;
+let totalScroll = 0;
+const delay = 5000;
 
 imageWrapper.style.setProperty('--per-view', perView)
 for(let i = 0; i < perView; i++) {
-  imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+  imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML);
 }
 
 let autoScroll = setInterval(scrolling, delay)
@@ -39,9 +39,15 @@ let header = document.querySelector('#header');
 let headerHeight;
 
 window.addEventListener('resize',()=>{
-    if(window.innerWidth >= 1025){
+    if(window.innerWidth > 850){
         menu.classList.remove('active');
+        perView = 3;
+        imageWrapper.style.setProperty('--per-view', perView)
     }
+    else if(window.innerWidth <= 850){
+      perView = 2;
+      imageWrapper.style.setProperty('--per-view', perView)
+  }
     headerHeight = header.offsetHeight;
 });
 
@@ -59,7 +65,6 @@ window.addEventListener('scroll',()=>{
     } else {
     headerContainer.classList.remove("sticky");
     menu.classList.remove("stickyMenu");
-    // menu.classList.remove("active")
     }
 });
 
