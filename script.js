@@ -30,7 +30,6 @@ function scrolling() {
 
 let menuToggle = document.querySelector('#menuToggle');
 let menu = document.querySelector('#menu')
-let menuPressed = false;
 menuToggle.addEventListener('click', (e) =>{
     menuToggle.classList.toggle('active');
     menu.classList.toggle('active');

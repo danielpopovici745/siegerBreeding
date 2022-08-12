@@ -183,13 +183,13 @@ li a{
 
 /* Media Queries */
 
-@media screen and (min-width:1025px){
+@media screen and (min-width:850px){
     #menuToggle{
         display: none;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 849px) {
     #headerContent{
         display: none;
     }
@@ -198,12 +198,12 @@ li a{
     }
 }
 
-@media screen and (max-width: 425px){
+/* @media screen and (max-width: 425px){
     #header{
         gap: 0px;
         justify-content: space-evenly;
     }
-}
+} */
 
 /* @media screen and (max-width: 281px){
     #header{
