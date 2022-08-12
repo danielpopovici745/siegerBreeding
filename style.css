@@ -196,8 +196,13 @@ li a{
     #header{
         justify-content: space-between;
         align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
         gap: 0px;
      }
+     #menuToggle{
+        padding-right: 20px;
+     }
+     #headerLogo{
+        padding-left: 20px;
+     }
+
 }
