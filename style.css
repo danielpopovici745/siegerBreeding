@@ -112,8 +112,6 @@ li a{
     transform: translateY(15px);
 }
 
-/* Slider */
-
 /* Image Slider */
 .imageContainer {
     overflow-x: hidden;
@@ -130,7 +128,7 @@ li a{
     transition: .3s;
 }
 .imageWrapper * {
-    aspect-ratio: 1;
+    aspect-ratio: 3/2;
 }
 .imageWrapper div img {
     width: 100%;
